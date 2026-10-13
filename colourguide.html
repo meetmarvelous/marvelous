@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nature's Palette | Colour Guide</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #354451;
+            background-color: #F3F6F5;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: #DCE7E9;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            color: #344E5C;
+            font-family: Georgia, serif;
+            font-size: 38px;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #627985;
+            font-size: 16px;
+        }
+
+        .header-emojis {
+            font-size: 24px;
+            letter-spacing: 8px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background-color: #FFFFFF;
+            padding: 15px 10px;
+            text-align: center;
+            border-bottom: 1px solid #D7E0E2;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 5px 10px;
+            color: #486675;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #8A718F;
+        }
+
+        /* GENERAL LAYOUT */
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            color: #344E5C;
+            font-family: Georgia, serif;
+            font-size: 27px;
+        }
+
+        .muted-text {
+            color: #71838A;
+        }
+
+        /* INTRODUCTION */
+
+        .intro {
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #486675;
+            font-family: Georgia, serif;
+            font-size: 28px;
+        }
+
+        .intro p {
+            max-width: 700px;
+            margin: 10px auto;
+        }
+
+        .intro-symbols {
+            font-size: 24px;
+            letter-spacing: 5px;
+        }
+
+        /* COLOUR COMBINATION CARDS */
+
+        .combination-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .combination-card {
+            background-color: #FFFFFF;
+            width: 290px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #DFE6E5;
+        }
+
+        .swatches {
+            display: flex;
+            height: 115px;
+        }
+
+        .swatch {
+            flex: 1;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            color: #344E5C;
+            margin-top: 0;
+        }
+
+        .hex-code {
+            display: inline-block;
+            background-color: #F0F3F2;
+            color: #435A64;
+            padding: 5px 8px;
+            border-radius: 5px;
+            margin: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* FASHION SECTION */
+
+        .fashion-section {
+            background-color: #E7ECEF;
+            padding: 28px;
+            border-radius: 12px;
+        }
+
+        .fashion-card {
+            background-color: #FFFFFF;
+            padding: 20px;
+            margin: 18px 0;
+            border-radius: 10px;
+            border-left: 5px solid #8299A5;
+        }
+
+        .outfit-swatches {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .outfit-colour {
+            width: 65px;
+            height: 65px;
+            border-radius: 8px;
+            border: 1px solid #D6DEDF;
+        }
+
+        /* COLOUR THEORY */
+
+        .theory-box {
+            background-color: #F0EAF2;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .theory-box h3 {
+          color: #75617D;
+        }
+          
+
+        /* CLOSING SECTION */
+
+        .closing {
+            background-color: #DCE7E9;
+            text-align: center;
+            padding: 35px 20px;
+            border-radius: 12px;
+        }
+
+        .closing h2 {
+            color: #344E5C;
+            font-family: Georgia, serif;
+        }
+
+        .closing p {
+            color: #536B75;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #344E5C;
+            color: #E8EFF0;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer strong {
+            color: #DCE7E9;
+        }
+
+        /* MOBILE DESIGN */
+
+        @media (max-width: 480px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            .intro,
+            .fashion-section,
+            .theory-box {
+                padding: 20px;
+            }
+
+            .combination-card {
+                width: 100%;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="header-emojis">
+             🌿 
+        </div>
+
+        <h1><strong>NATURE'S PALETTE</strong></h1>
+
+        <p>
+            Where Nature Inspires Your Colours
+        </p>
+
+        <p><b>Discover. Combine. Create.</b></p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="#combinations">Colour Combinations</a>
+
+        <a href="#fashion">Fashion & Styling</a>
+
+        <a href="#theory">Colour Theory</a>
+        
+
+    </nav>
+
+
+    <main>
+
+        <!-- INTRODUCTION -->
+
+        <section class="intro">
+
+            <h2>Finding the right colours shouldn't be difficult.</h2>
+
+            <p>
+                Have you ever found a beautiful colour but struggled
+                to decide what goes with it? You're not alone.
+            </p>
+
+            <p>
+                <strong>Nature's Palette</strong> is your little guide to
+                discovering colour combinations, and finding inspiration for fashion,
+                creativity and everyday design.
+            </p>
+
+            <p class="intro-symbols">
+                 🎨💆🌿
+            </p>
+
+        </section>
+
+
+        <!-- COLOUR COMBINATIONS -->
+
+        <section id="combinations">
+
+            <h2 class="section-title">
+                <strong>Explore Colour Combinations</strong>
+            </h2>
+
+            <p class="muted-text">
+                Need inspiration? Start with one of these carefully
+                selected colour palettes.
+            </p>
+
+
+            <div class="combination-grid">
+
+                <!-- PALETTE ONE -->
+
+                <div class="combination-card">
+
+                    <div class="swatches">
+
+                        <div class="swatch"
+                        style="background-color:#344E5C;"></div>
+
+                        <div class="swatch"
+                        style="background-color:#A8C5CF;"></div>
+
+                        <div class="swatch"
+                        style="background-color:#F5F3EF;"></div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>🌊 Ocean Calm</h3>
+
+                        <p>
+                            A cool, balanced palette inspired by
+                            the sea and cloudy skies.
+                        </p>
+
+                        <p><b>Try it for:</b> Casual outfits and clean websites.</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PALETTE TWO -->
+
+                <div class="combination-card">
+
+                    <div class="swatches">
+
+                        <div class="swatch"
+                        style="background-color:#75617D;"></div>
+
+                        <div class="swatch"
+                        style="background-color:#C9B8D5;"></div>
+
+                        <div class="swatch"
+                        style="background-color:#F3EEF5;"></div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>🪻 Lavender Mist</h3>
+
+                        <p>
+                            Soft purple shades that feel gentle,
+                            expressive and elegant.
+                        </p>
+
+                        <p><b>Try it for:</b> Dresses, accessories and journals.</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PALETTE THREE -->
+
+                <div class="combination-card">
+
+                    <div class="swatches">
+
+                        <div class="swatch"
+                        style="background-color:#526B5D;"></div>
+
+                        <div class="swatch"
+                        style="background-color:#B7C9B0;"></div>
+
+                        <div class="swatch"
+                        style="background-color:#F3F0E8;"></div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>🌿 Sage Garden</h3>
+
+                        <p>
+                            Muted greens paired with a soft neutral
+                            for a naturally coordinated look.
+                        </p>
+
+                        <p><b>Try it for:</b> Everyday wear and room decor.</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PALETTE FOUR -->
+
+                <div class="combination-card">
+
+                    <div class="swatches">
+
+                        <div class="swatch"
+                        style="background-color:#222222;"></div>
+
+                        <div class="swatch"
+                        style="background-color:#7189A6;"></div>
+
+                        <div class="swatch"
+                        style="background-color:#FFFFFF;"></div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>🩶 Midnight Blue</h3>
+
+                        <p>
+                            Black, muted blue and white create a
+                            simple palette with plenty of contrast.
+                        </p>
+
+                        <p><b>Try it for:</b> Minimalist fashion and formal outfits.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FASHION AND STYLING -->
+
+        <section class="fashion-section" id="fashion">
+
+            <h2 class="section-title">
+                <strong>Let's Talk Fashion 👗</strong>
+            </h2>
+
+            <p>
+                Sometimes, you already have the colours you love.
+                The challenge is knowing how to put them together.
+            </p>
+
+            <p>
+                Let's explore a few ways to style
+                <strong>black, white and blue.</strong>
+            </p>
+
+
+            <!-- OUTFIT ONE -->
+
+            <div class="fashion-card">
+
+                <h3>01. Black + White + Denim Blue</h3>
+
+                <div class="outfit-swatches">
+
+                    <div class="outfit-colour"
+                    style="background-color:#222222;"></div>
+
+                    <div class="outfit-colour"
+                    style="background-color:#FFFFFF;"></div>
+
+                    <div class="outfit-colour"
+                    style="background-color:#6688AA;"></div>
+
+                </div>
+
+                <p>
+                    <b>How to combine:</b> Pair a white top with
+                    blue denim and black shoes or a black bag.
+                </p>
+
+
+                <p class="muted-text">
+                    Style idea: Relaxed, casual and easy to coordinate.
+                </p>
+
+            </div>
+
+
+            <!-- OUTFIT TWO -->
+
+            <div class="fashion-card">
+
+                <h3>02. Blue + White + Silver Grey</h3>
+
+                <div class="outfit-swatches">
+
+                    <div class="outfit-colour"
+                    style="background-color:#486A91;"></div>
+
+                    <div class="outfit-colour"
+                    style="background-color:#FFFFFF;"></div>
+
+                    <div class="outfit-colour"
+                    style="background-color:#C5C9CC;"></div>
+
+                </div>
+
+                <p>
+                    <b>How to combine:</b> Wear a blue shirt or dress
+                    with white accessories and silver-grey details.
+                </p>
+
+
+                <p class="muted-text">
+                    Style idea: Light, coordinated and understated.
+                </p>
+
+            </div>
+
+
+            <!-- OUTFIT THREE -->
+
+            <div class="fashion-card">
+
+                <h3>03. Black + Powder Blue + Cream</h3>
+
+                <div class="outfit-swatches">
+
+                    <div class="outfit-colour"
+                    style="background-color:#222222;"></div>
+
+                    <div class="outfit-colour"
+                    style="background-color:#B7D1E5;"></div>
+
+                    <div class="outfit-colour"
+                    style="background-color:#F3EBDD;"></div>
+
+                </div>
+
+                <p>
+                    <b>How to combine:</b> Combine a black outfit
+                    with a powder-blue layer and cream accessories.
+                </p>
+
+
+                <p class="muted-text">
+                    Style idea: A soft contrast between dark and light shades.
+                </p>
+
+            </div>
+
+
+            <!-- OUTFIT FOUR -->
+
+            <div class="fashion-card">
+
+                <h3>04. Navy Blue + White + Camel</h3>
+
+                <div class="outfit-swatches">
+
+                    <div class="outfit-colour"
+                    style="background-color:#24364B;"></div>
+
+                    <div class="outfit-colour"
+                    style="background-color:#FFFFFF;"></div>
+
+                    <div class="outfit-colour"
+                    style="background-color:#C19A6B;"></div>
+
+                </div>
+
+                <p>
+                    <b>How to combine:</b> Try navy trousers with
+                    a white shirt and camel-coloured shoes or a bag.
+                </p>
+
+                <p class="muted-text">
+                    Style idea: A classic combination for everyday or smart-casual wear.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- COLOUR THEORY -->
+
+        <section class="theory-box" id="theory">
+
+            <h2 class="section-title">
+                <strong>A Little Colour Theory 🎨</strong>
+            </h2>
+
+            <p>
+                Understanding a few basic principles makes choosing
+                combinations easier.
+            </p>
+
+            <h3>1. Complementary Colours</h3>
+
+            <p>
+                These colours sit opposite each other on the traditional
+                colour wheel. They create noticeable contrast.
+                Blue and orange are one example.
+            </p>
+
+            <h3>2. Analogous Colours</h3>
+
+            <p>
+                These colours sit next to one another on the colour wheel.
+                Blue, blue-green and green can create a harmonious palette.
+            </p>
+
+            <h3>3. Neutral Colours</h3>
+
+            <p>
+                Black, white, grey, beige and cream can work as
+                supporting colours in many combinations.
+            </p>
+
+            <h3>4. The Three-Colour Method</h3>
+
+            <p>
+                Start with one main colour, add a supporting colour,
+                and finish with a smaller accent.
+                <strong>You don't need many colours to create a coordinated look.</strong>
+            </p>
+
+        </section>
+
+
+        <!-- CLOSING -->
+
+        <section class="closing">
+
+            <h2><strong>Your Colours, Your Expression.</strong></h2>
+
+            <p>
+                Fashion is an opportunity to experiment.
+                Design is an opportunity to create.
+                Colour is one of the ways we express ourselves.
+            </p>
+
+            <p>
+                <strong>Start with what you love. Explore what works.</strong>
+            </p>
+
+            <p style="font-size:25px;">
+                🍀 🤍 
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p><strong>NATURE'S PALETTE</strong></p>
+
+        <p>
+            A colour combination and inspiration guide.
+        </p>
+
+        <p style="font-size:12px;">
+            &copy; 2026 | Explore your own palette.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
