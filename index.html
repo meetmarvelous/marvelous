@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Works | Project Showcase</title>
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS RESET & VARIABLES */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #FFFFFF;
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --card-border: rgba(226, 232, 240, 0.85);
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --shadow-base: 0 10px 30px -10px rgba(15, 23, 42, 0.07), 0 4px 6px -4px rgba(15, 23, 42, 0.03);
+      --shadow-hover: 0 24px 40px -12px rgba(15, 23, 42, 0.14);
+
+      /* Vibrant Brand Accents */
+      --flambe-color: #FF5722;
+      --flambe-grad: linear-gradient(135deg, #FF6B35 0%, #E64A19 100%);
+      --guitar-color: #D97706;
+      --guitar-grad: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);
+      --palette-color: #0D9488;
+      --palette-grad: linear-gradient(135deg, #14B8A6 0%, #0F766E 100%);
+    }
+
+    body {
+      background-color: var(--bg);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 20px 40px;
+      position: relative;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* VIBRANT AMBIENT BACKGROUND WITH SUBTLE MESH LIGHTS */
+    .ambient-background {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 50% 10%, rgba(255, 107, 53, 0.08) 0%, transparent 48%),
+        radial-gradient(circle at 15% 55%, rgba(245, 158, 11, 0.07) 0%, transparent 42%),
+        radial-gradient(circle at 85% 65%, rgba(20, 184, 166, 0.08) 0%, transparent 45%);
+    }
+
+    /* MAIN CONTAINER: FULL CENTER ALIGNMENT */
+    .tree-container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* PROFILE & INTRO HEADER */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+
+    .avatar-box {
+      position: relative;
+      width: 94px;
+      height: 94px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .avatar-glow {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FF6B35, #D97706, #0D9488);
+      filter: blur(12px);
+      opacity: 0.35;
+      animation: pulse-glow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse-glow {
+      0% { opacity: 0.25; transform: scale(0.96); }
+      100% { opacity: 0.45; transform: scale(1.05); }
+    }
+
+    .avatar-circle {
+      position: relative;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FF5722 0%, #D97706 50%, #0D9488 100%);
+      display: grid;
+      place-items: center;
+      line-height: 1;
+      font-size: 40px;
+      border: 4px solid #FFFFFF;
+      box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.12);
+      user-select: none;
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .avatar-box:hover .avatar-circle {
+      transform: scale(1.06) rotate(6deg);
+    }
+
+    .status-dot {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      background: #10B981;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 3px solid #FFFFFF;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+      pointer-events: none;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      color: #475569;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+    }
+
+    .page-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .page-bio {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 34px;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    /* LINKS GROUP */
+    .links-stack {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* COMPLETELY CENTER-ALIGNED LINK CARD */
+    .link-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      background: var(--card-bg);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 24px 20px 20px;
+      box-shadow: var(--shadow-base);
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    /* TOP ACCENT LINE WITH PROJECT COLOR */
+    .link-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      border-radius: 0 0 4px 4px;
+      transition: width 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .card-flambe::before { background: var(--flambe-grad); }
+    .card-guitars::before { background: var(--guitar-grad); }
+    .card-palette::before { background: var(--palette-grad); }
+
+    /* CENTERED ICON BADGE */
+    .icon-wrapper {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      line-height: 1;
+      font-size: 1.7rem;
+      margin-bottom: 12px;
+      user-select: none;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+
+    .card-flambe .icon-wrapper {
+      background: #FFF3EB;
+      box-shadow: 0 6px 16px -4px rgba(255, 107, 53, 0.2);
+    }
+
+    .card-guitars .icon-wrapper {
+      background: #FFFBEB;
+      box-shadow: 0 6px 16px -4px rgba(217, 119, 6, 0.2);
+    }
+
+    .card-palette .icon-wrapper {
+      background: #F0FDFA;
+      box-shadow: 0 6px 16px -4px rgba(13, 148, 136, 0.2);
+    }
+
+    /* CARD TEXT (CENTERED) */
+    .card-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      transition: color 0.25s ease;
+    }
+
+    .card-description {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin-bottom: 14px;
+      max-width: 320px;
+    }
+
+    /* CENTERED ACTION CHIP / PILL */
+    .card-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      color: #475569;
+      transition: all 0.3s ease;
+    }
+
+    .action-arrow {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      transition: transform 0.3s ease;
+    }
+
+    /* HOVER & FOCUS STATES */
+    .link-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      background: #FFFFFF;
+    }
+
+    .link-card:hover::before {
+      width: 100%;
+      border-radius: 0;
+    }
+
+    .link-card:hover .icon-wrapper {
+      transform: scale(1.12) translateY(-2px);
+    }
+
+    .link-card:hover .action-arrow {
+      transform: translateX(3px);
+    }
+
+    /* Card 1: Flambé Hover */
+    .card-flambe:hover {
+      border-color: rgba(255, 87, 34, 0.35);
+    }
+    .card-flambe:hover .card-title {
+      color: var(--flambe-color);
+    }
+    .card-flambe:hover .card-action {
+      background: #FFF3EB;
+      color: var(--flambe-color);
+      border-color: rgba(255, 87, 34, 0.25);
+    }
+
+    /* Card 2: Guitars Hover */
+    .card-guitars:hover {
+      border-color: rgba(217, 119, 6, 0.35);
+    }
+    .card-guitars:hover .card-title {
+      color: var(--guitar-color);
+    }
+    .card-guitars:hover .card-action {
+      background: #FFFBEB;
+      color: var(--guitar-color);
+      border-color: rgba(217, 119, 6, 0.25);
+    }
+
+    /* Card 3: Nature's Palette Hover */
+    .card-palette:hover {
+      border-color: rgba(13, 148, 136, 0.35);
+    }
+    .card-palette:hover .card-title {
+      color: var(--palette-color);
+    }
+    .card-palette:hover .card-action {
+      background: #F0FDFA;
+      color: var(--palette-color);
+      border-color: rgba(13, 148, 136, 0.25);
+    }
+
+    .link-card:active {
+      transform: translateY(-2px) scale(0.99);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 48px;
+      font-size: 0.82rem;
+      color: #94A3B8;
+      text-align: center;
+    }
+
+    footer .brand-gradient {
+      background: linear-gradient(135deg, #FF6B35, #D97706, #0D9488);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    /* ACCESSIBILITY */
+    a:focus-visible {
+      outline: 2px solid var(--text-main);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient background glow layers -->
+  <div class="ambient-background" aria-hidden="true"></div>
+
+  <!-- Central Linktree Container -->
+  <main class="tree-container">
+
+    <!-- Profile Header (100% Center-Aligned) -->
+    <header>
+      <div class="avatar-box">
+        <div class="avatar-glow"></div>
+        <div class="avatar-circle" role="img" aria-label="Creative Projects">✨</div>
+        <div class="status-dot" title="Portfolio Online"></div>
+      </div>
+
+      <div class="badge-pill">
+        <span>Portfolio Explorer</span>
+      </div>
+
+      <h1 class="page-title">Curated Projects</h1>
+      <p class="page-bio">Explore interactive web applications, educational handbooks, and harmonic design palettes.</p>
+    </header>
+
+    <!-- Center-Aligned Project Links -->
+    <section class="links-stack" aria-label="Project Showcases">
+
+      <!-- 1. Flambé -->
+      <a href="flambe.html" class="link-card card-flambe" title="Flambé: Merge & Cook">
+        <div class="icon-wrapper">🍳</div>
+        <h2 class="card-title">Flambé: Merge & Cook</h2>
+        <p class="card-description">A cooking-themed merge mobile game combining ingredients and restaurant upgrades.</p>
+        <div class="card-action">
+          <span>Open Game</span>
+          <svg class="action-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 2. Guitars -->
+      <a href="guitars.html" class="link-card card-guitars" title="The World of Guitars">
+        <div class="icon-wrapper">🎸</div>
+        <h2 class="card-title">The World of Guitars</h2>
+        <p class="card-description">A digital beginner's handbook exploring instrument types, anatomy, and sound physics.</p>
+        <div class="card-action">
+          <span>Explore Book</span>
+          <svg class="action-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 3. Nature's Palette -->
+      <a href="colourguide.html" class="link-card card-palette" title="Nature's Palette">
+        <div class="icon-wrapper">🌿</div>
+        <h2 class="card-title">Nature's Palette</h2>
+        <p class="card-description">An organic design guide covering color combinations, fashion styling, and theory.</p>
+        <div class="card-action">
+          <span>View Palettes</span>
+          <svg class="action-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- Centered Minimalist Footer -->
+    <footer>
+      Designed with <span class="brand-gradient">Precision & Style</span>
+    </footer>
+
+  </main>
+
+</body>
+</html>
